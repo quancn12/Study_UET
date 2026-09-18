@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+Thumbs.db
+
+# VitePress cache and build outputs
+docs/.vitepress/cache
+docs/.vitepress/dist
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/

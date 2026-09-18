@@ -1,0 +1,26 @@
+{
+  "name": "study-uet",
+  "version": "1.0.0",
+  "description": "Kho tài liệu và bài giảng ôn tập môn học UET",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "uet",
+    "study",
+    "revision",
+    "algorithms",
+    "notes"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^11.4.1",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  }
+}
