@@ -74,7 +74,12 @@ export default withMermaid(
           {
             text: 'Lập trình Xử lý Dữ liệu',
             items: [
-              { text: '1. Tổng quan & Lộ trình môn học', link: '/xu-ly-du-lieu/' }
+              { text: '0. Tổng quan & Lộ trình môn học', link: '/xu-ly-du-lieu/' },
+              { text: 'Bài 1: Tổng quan, Công cụ & Chính sách AI', link: '/xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai' },
+              { text: 'Bài 2: Python cơ bản cho xử lý dữ liệu', link: '/xu-ly-du-lieu/bai-02-python-co-ban' },
+              { text: 'Bài 3: NumPy và tư duy vector hoá', link: '/xu-ly-du-lieu/bai-03-numpy' },
+              { text: 'Bài 4: Làm quen với pandas', link: '/xu-ly-du-lieu/bai-04-lam-quen-pandas' },
+              { text: 'Bài 5: Series & DataFrame chuyên sâu', link: '/xu-ly-du-lieu/bai-05-series-dataframe-chuyen-sau' }
             ]
           }
         ],
