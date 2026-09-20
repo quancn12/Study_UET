@@ -188,7 +188,7 @@ flowchart LR
     S3 --> S4["4️⃣ Kiểm chứng<br/>thử trên mẫu<br/>tự tính tay"]
     S4 --> S5["5️⃣ Khai báo<br/>ghi vào<br/>AI_USAGE.md"]
 
-    style S4 fill:#fff3e0,stroke:#e65100,stroke-width:3px
+    style S4 fill:#fff3e0,stroke:#e65100,stroke-width:3px,color:#993d00
 ```
 
 1. **Khai báo** — dùng công cụ AI nào, cho việc gì (bài tập lớn: điền vào `AI_USAGE.md`). Khai báo đầy đủ **không bị trừ điểm**; che giấu mới là vấn đề.

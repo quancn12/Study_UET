@@ -18,7 +18,16 @@ export default withMermaid(
       lineNumbers: true
     },
     mermaid: {
-      theme: 'default'
+      theme: 'default',
+      themeVariables: {
+        fontSize: '14px',
+        fontFamily: 'Inter, system-ui, -apple-system, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        padding: 18,
+        curve: 'basis'
+      }
     },
     appearance: true,
     themeConfig: {

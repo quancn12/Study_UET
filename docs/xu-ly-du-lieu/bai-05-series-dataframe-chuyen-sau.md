@@ -187,8 +187,8 @@ flowchart LR
     R1 --> C["🔗 combine<br/>ghép lại thành 1 Series/DataFrame"]
     R2 --> C
     R3 --> C
-    style D fill:#e3f2fd,stroke:#1565c0
-    style C fill:#e8f5e9,stroke:#2e7d32
+    style D fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    style C fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
 ```
 
 `groupby` **chia** bảng theo khoá, **áp** phép tính cho từng nhóm riêng biệt, rồi **ghép** kết quả lại — toàn bộ ba bước này được biểu diễn trong **một câu lệnh** duy nhất.
@@ -305,8 +305,8 @@ flowchart LR
         direction LR
         L2["Bảng trái<br/>GIỮ TOÀN BỘ"] -.->|khớp được thì nối,<br/>không khớp → NaN| R2["Bảng phải"]
     end
-    style inner fill:#fff3e0,stroke:#e65100
-    style left fill:#e8f5e9,stroke:#2e7d32
+    style inner fill:#fff3e0,stroke:#e65100,color:#b43e00
+    style left fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
 ```
 
 | `how=` | Giữ lại | Dùng khi nào |

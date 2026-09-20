@@ -28,8 +28,8 @@ flowchart TD
     subgraph N["ndarray: np.array([10,12,11], dtype=int64)"]
         N0["vùng dữ liệu liền kề"] --- V1["10"] --- V2["12"] --- V3["11"]
     end
-    style N0 fill:#e8f5e9,stroke:#2e7d32
-    style R0 fill:#fff3e0,stroke:#e65100
+    style N0 fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    style R0 fill:#fff3e0,stroke:#e65100,color:#b43e00
 ```
 
 ::: info Định nghĩa cốt lõi
@@ -179,8 +179,8 @@ flowchart LR
         V1["Python gọi ufunc<br/>MỘT LẦN duy nhất"] --> V2["Vòng lặp C đã biên dịch sẵn<br/>chạy trên vùng nhớ liên tục"]
         V2 --> V3["CPU dùng SIMD:<br/>4 số/lệnh máy (nếu khả dụng)"]
     end
-    style P fill:#fff3e0,stroke:#e65100
-    style V fill:#e8f5e9,stroke:#2e7d32
+    style P fill:#fff3e0,stroke:#e65100,color:#b43e00
+    style V fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
 ```
 
 | Tầng | Vòng `for` trên `list` | Phép toán NumPy |

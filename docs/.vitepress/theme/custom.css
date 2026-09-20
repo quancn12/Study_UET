@@ -97,3 +97,33 @@ html:not(.dark) th {
 html, body, .VPNav, .VPSidebar, .VPContent, .VPFooter, .VPNavBar, .VPLocalNav {
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
 }
+
+/* ========================================================
+   7. KHẮC PHỤC TRIỆT ĐỂ LỖI TRÀN / THIẾU CHỮ TRONG SƠ ĐỒ MERMAID
+   ======================================================== */
+.mermaid {
+  line-height: 1.25 !important;
+  font-size: 14px !important;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.mermaid svg foreignObject {
+  overflow: visible !important;
+}
+
+.mermaid svg foreignObject div,
+.mermaid svg foreignObject span,
+.mermaid svg foreignObject p,
+.mermaid svg .nodeLabel,
+.mermaid svg .label {
+  line-height: 1.25 !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

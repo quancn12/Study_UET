@@ -18,9 +18,9 @@
 flowchart LR
     A["🔢 ndarray<br/>khối số, chỉ có VỊ TRÍ"] --> B["🏷️ Series<br/>1 cột + index có TÊN"]
     B --> C["📋 DataFrame<br/>nhiều Series chung 1 index"]
-    style A fill:#fff3e0,stroke:#e65100
-    style B fill:#e3f2fd,stroke:#1565c0
-    style C fill:#e8f5e9,stroke:#2e7d32
+    style A fill:#fff3e0,stroke:#e65100,color:#b43e00
+    style B fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    style C fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
 ```
 
 ## 1. Series & DataFrame là gì?
