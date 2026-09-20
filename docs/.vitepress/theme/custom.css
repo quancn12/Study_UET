@@ -1,0 +1,99 @@
+/* ========================================================
+   TÙY BIẾN GIAO DIỆN LIGHT / DARK THEME CHO UET STUDY HUB
+   ======================================================== */
+
+/* 1. Luôn hiển thị nút chuyển đổi Mặt trời / Mặt trăng trên Navbar */
+.VPNavBarAppearance {
+  display: flex !important;
+  align-items: center !important;
+  margin-left: 12px;
+}
+
+/* Ẩn nút ba chấm (...) nếu chỉ dùng để chứa theme switch */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .VPNavBarExtra {
+    display: none !important;
+  }
+}
+
+/* 2. Đảm bảo nút bấm chuyển theme có con trỏ pointer rõ ràng */
+.VPSwitchAppearance {
+  cursor: pointer !important;
+}
+
+.VPSwitchAppearance .check {
+  transition: transform 0.25s ease !important;
+}
+
+.VPNavBarExtra .item.appearance {
+  cursor: pointer !important;
+}
+
+/* 3. Tối ưu độ tương phản cho Light Mode (Giao diện Sáng) */
+:root {
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #3b82f6;
+  --vp-c-brand-3: #60a5fa;
+  --vp-c-brand-soft: rgba(37, 99, 235, 0.14);
+
+  --vp-c-bg: #ffffff !important;
+  --vp-c-bg-soft: #f8fafc !important;
+  --vp-c-bg-alt: #f1f5f9 !important;
+  --vp-c-bg-elv: #ffffff !important;
+
+  --vp-c-text-1: #0f172a !important;
+  --vp-c-text-2: #334155 !important;
+  --vp-c-text-3: #64748b !important;
+
+  --vp-c-border: #cbd5e1 !important;
+  --vp-c-divider: #e2e8f0 !important;
+  --vp-c-gutter: #e2e8f0 !important;
+
+  --vp-code-block-bg: #f8fafc !important;
+}
+
+/* 4. Tối ưu độ tương phản cho Dark Mode (Giao diện Tối) */
+.dark {
+  --vp-c-brand-1: #60a5fa;
+  --vp-c-brand-2: #3b82f6;
+  --vp-c-brand-3: #2563eb;
+  --vp-c-brand-soft: rgba(96, 165, 250, 0.16);
+
+  --vp-c-bg: #111827 !important;
+  --vp-c-bg-soft: #1f2937 !important;
+  --vp-c-bg-alt: #0f172a !important;
+  --vp-c-bg-elv: #1f2937 !important;
+
+  --vp-c-text-1: #f8fafc !important;
+  --vp-c-text-2: #cbd5e1 !important;
+  --vp-c-text-3: #94a3b8 !important;
+
+  --vp-c-border: #374151 !important;
+  --vp-c-divider: #1f2937 !important;
+  --vp-c-gutter: #111827 !important;
+
+  --vp-code-block-bg: #1f2937 !important;
+}
+
+/* 5. Tối ưu sơ đồ Mermaid và bảng khi ở Light Mode */
+html:not(.dark) .mermaid {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) table {
+  border-collapse: collapse;
+}
+
+html:not(.dark) th {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* 6. Hiệu ứng chuyển đổi màu nền mượt mà */
+html, body, .VPNav, .VPSidebar, .VPContent, .VPFooter, .VPNavBar, .VPLocalNav {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+}

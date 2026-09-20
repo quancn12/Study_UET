@@ -18,9 +18,13 @@ export default withMermaid(
       lineNumbers: true
     },
     mermaid: {
-      theme: 'neutral'
+      theme: 'default'
     },
+    appearance: true,
     themeConfig: {
+      darkModeSwitchLabel: 'Giao diện',
+      lightModeSwitchTitle: 'Chuyển sang giao diện sáng',
+      darkModeSwitchTitle: 'Chuyển sang giao diện tối',
       siteTitle: '📚 UET Study Hub',
       logo: '/logo.svg',
       nav: [
