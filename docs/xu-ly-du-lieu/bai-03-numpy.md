@@ -18,16 +18,22 @@ Hãy tưởng tượng bạn cần phủ socola lên 1 triệu chiếc bánh **g
 Sự khác biệt cốt lõi không nằm ở "phép tính" (đều là phủ socola / nhân với 2) mà nằm ở **cách tổ chức dữ liệu**: `list` lưu các bánh (đối tượng) rải rác, chỉ có một dãy "địa chỉ" trỏ tới chúng; `ndarray` lưu **chính các giá trị**, liền kề nhau, cùng một kiểu. Đây là lý do vì sao bài học bắt đầu từ *cách lưu dữ liệu* trước khi nói đến tốc độ.
 
 ```mermaid
-flowchart TD
-    subgraph L["list Python: [10, 12, 11]"]
-        L0["biến list"] --> R0["mảng tham chiếu<br/>(liền nhau)"]
-        R0 -->|trỏ tới| O1["object int(10)<br/>ở đâu đó trong RAM"]
-        R0 -->|trỏ tới| O2["object int(12)<br/>ở đâu đó trong RAM"]
-        R0 -->|trỏ tới| O3["object int(11)<br/>ở đâu đó trong RAM"]
+flowchart TB
+    subgraph N["⚡ ndarray: np.array([10, 12, 11], dtype=int64) — Lưu trực tiếp các giá trị liền kề"]
+        direction LR
+        N0["Vùng nhớ liên tục"] --- V1["10"] --- V2["12"] --- V3["11"]
     end
-    subgraph N["ndarray: np.array([10,12,11], dtype=int64)"]
-        N0["vùng dữ liệu liền kề"] --- V1["10"] --- V2["12"] --- V3["11"]
+
+    subgraph L["🐢 list Python: [10, 12, 11] — Lưu các tham chiếu rải rác"]
+        direction LR
+        L0["Biến list"] --> R0["Mảng tham chiếu<br/>(địa chỉ)"]
+        R0 -->|trỏ tới| O1["object int(10)<br/>trong RAM"]
+        R0 -->|trỏ tới| O2["object int(12)<br/>trong RAM"]
+        R0 -->|trỏ tới| O3["object int(11)<br/>trong RAM"]
     end
+
+    N ~~~ L
+
     style N0 fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
     style R0 fill:#fff3e0,stroke:#e65100,color:#b43e00
 ```

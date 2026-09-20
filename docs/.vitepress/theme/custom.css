@@ -78,10 +78,10 @@
 /* 5. Tối ưu sơ đồ Mermaid và bảng khi ở Light Mode */
 html:not(.dark) .mermaid {
   background-color: #ffffff;
-  padding: 16px;
-  border-radius: 8px;
+  padding: 24px 16px;
+  border-radius: 12px;
   border: 1px solid #cbd5e1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 html:not(.dark) table {
@@ -99,18 +99,82 @@ html, body, .VPNav, .VPSidebar, .VPContent, .VPFooter, .VPNavBar, .VPLocalNav {
 }
 
 /* ========================================================
-   7. KHẮC PHỤC TRIỆT ĐỂ LỖI TRÀN / THIẾU CHỮ TRONG SƠ ĐỒ MERMAID
+   7. KHẮC PHỤC TRIỆT ĐỂ LỖI TRÀN / THIẾU CHỮ & THU PHÓNG SƠ ĐỒ
    ======================================================== */
 .mermaid {
+  position: relative;
   line-height: 1.25 !important;
   font-size: 14px !important;
   text-align: center;
   overflow-x: auto;
+  margin: 24px 0;
+  padding: 24px 16px;
+  border-radius: 12px;
+  cursor: zoom-in;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.mermaid:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dark .mermaid {
+  background-color: #1a2234;
+  border: 1px solid #2e3b52;
+}
+
+.dark .mermaid:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-color: #3b82f6;
+}
+
+/* Nút bấm Phóng to ở góc trên bên phải sơ đồ */
+.mermaid-zoom-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: var(--vp-c-brand-1);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.mermaid:hover .mermaid-zoom-btn {
+  opacity: 1;
+}
+
+.mermaid-zoom-btn:hover {
+  background: var(--vp-c-brand-1);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.dark .mermaid-zoom-btn {
+  background: rgba(96, 165, 250, 0.12);
+  border-color: rgba(96, 165, 250, 0.3);
+  color: #93c5fd;
+}
+
+.dark .mermaid-zoom-btn:hover {
+  background: #3b82f6;
+  color: #ffffff !important;
 }
 
 .mermaid svg {
   max-width: 100% !important;
   height: auto !important;
+  margin: 0 auto;
 }
 
 .mermaid svg foreignObject {
