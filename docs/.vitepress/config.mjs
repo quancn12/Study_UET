@@ -60,10 +60,23 @@ export default withMermaid(
       sidebar: {
         '/bieu-dien-tri-thuc/': [
           {
-            text: 'Biểu diễn Tri thức & Tìm kiếm Nâng cao',
+            text: 'Mục lục & Lộ trình',
             items: [
-              { text: '1. Tổng quan & Lộ trình môn học', link: '/bieu-dien-tri-thuc/' },
-              { text: '2. Chuyên đề: Tìm kiếm Heuristic, A*, Minimax & FOL', link: '/bieu-dien-tri-thuc/bieu-dien-tri-thuc-va-tim-kiem-nang-cao' }
+              { text: '0. Mục lục & Khung chương trình', link: '/bieu-dien-tri-thuc/' }
+            ]
+          },
+          {
+            text: 'Phần I: Tìm kiếm (Search)',
+            items: [
+              { text: 'Chương 2: Tìm kiếm mù (BFS, DFS, UCS, IDS)', link: '/bieu-dien-tri-thuc/02-tim-kiem-mu' },
+              { text: 'Chương 3: Tìm kiếm kinh nghiệm (Greedy, A*)', link: '/bieu-dien-tri-thuc/03-tim-kiem-kinh-nghiem' },
+              { text: 'Chương 4: Tìm kiếm có đối thủ (Minimax, Alpha–Beta)', link: '/bieu-dien-tri-thuc/04-tim-kiem-doi-khang' }
+            ]
+          },
+          {
+            text: 'Phần IV: Logic & Biểu diễn Tri thức',
+            items: [
+              { text: 'Chương 14: Logic & Biểu diễn tri thức (FOL)', link: '/bieu-dien-tri-thuc/14-logic-bieu-dien-tri-thuc' }
             ]
           }
         ],
@@ -71,7 +84,9 @@ export default withMermaid(
           {
             text: 'Cơ sở Toán cho AI',
             items: [
-              { text: '1. Tổng quan & Lộ trình môn học', link: '/toan-cho-ai/' }
+              { text: '0. Tổng quan & Lộ trình môn học', link: '/toan-cho-ai/' },
+              { text: 'Bài 01: Nhập môn Giới thiệu về Tối ưu', link: '/toan-cho-ai/bai-01-nhap-mon-toi-uu' },
+              { text: 'Bài 02: Tập lồi: Hình học của những lựa chọn', link: '/toan-cho-ai/bai-02-tap-loi' }
             ]
           }
         ],
